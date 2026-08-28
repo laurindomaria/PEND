@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monte seu Lanche</title>
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div>
+            <h1>🥪 Monte seu Lanche</h1>
+
+            <p>
+                Arraste os ingredientes para montar seu lanche!
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+
+    <main>
+
+        <!-- INGREDIENTES -->
+
+        <section class="ingredientes">
+
+            <h2>Escolha seus ingredientes</h2>
+
+
+            <!-- PÃES -->
+
+            <h3>Pães</h3>
+
+            <div class="opcoes">
+
+                <div draggable="true" id="pao-branco" data-preco="5">
+
+                    <h4>🥖 Pão Branco</h4>
+
+                    <p>R$ 5,00</p>
+
+                </div>
+
+
+                <div draggable="true" id="pao-integral" data-preco="6">
+
+                    <h4>🥖 Pão Integral</h4>
+
+                    <p>R$ 6,00</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROTEÍNAS -->
+
+            <h3>Proteínas</h3>
+
+            <div class="opcoes">
+
+                <div draggable="true" id="frango" data-preco="7">
+
+                    <h4>🍗 Frango</h4>
+
+                    <p>R$ 7,00</p>
+
+                </div>
+
+
+                <div draggable="true" id="carne" data-preco="8">
+
+                    <h4>🥩 Carne</h4>
+
+                    <p>R$ 8,00</p>
+
+                </div>
+
+
+                <div draggable="true" id="presunto" data-preco="6">
+
+                    <h4>🍖 Presunto</h4>
+
+                    <p>R$ 6,00</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUEIJOS -->
+
+            <h3>Queijos</h3>
+
+            <div class="opcoes">
+
+                <div draggable="true" id="mussarela" data-preco="3">
+
+                    <h4>🧀 Muçarela</h4>
+
+                    <p>R$ 3,00</p>
+
+                </div>
+
+
+                <div draggable="true" id="cheddar" data-preco="4">
+
+                    <h4>🧀 Cheddar</h4>
+
+                    <p>R$ 4,00</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADICIONAIS -->
+
+            <h3>Adicionais</h3>
+
+            <div class="opcoes">
+
+                <div draggable="true" id="alface" data-preco="2">
+
+                    <h4>🥬 Alface</h4>
+
+                    <p>R$ 2,00</p>
+
+                </div>
+
+
+                <div draggable="true" id="tomate" data-preco="2">
+
+                    <h4>🍅 Tomate</h4>
+
+                    <p>R$ 2,00</p>
+
+                </div>
+
+
+                <div draggable="true" id="bacon" data-preco="4">
+
+                    <h4>🥓 Bacon</h4>
+
+                    <p>R$ 4,00</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOLHOS -->
+
+            <h3>Molhos</h3>
+
+            <div class="opcoes">
+
+                <div draggable="true" id="maionese" data-preco="1">
+
+                    <h4>Maionese</h4>
+
+                    <p>R$ 1,00</p>
+
+                </div>
+
+
+                <div draggable="true" id="barbecue" data-preco="1">
+
+                    <h4>BBQ</h4>
+
+                    <p>R$ 1,00</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEU LANCHE -->
+
+        <section class="lanche">
+
+            <h2>🥪 Seu Lanche</h2>
+
+
+            <!-- ÁREA PARA ARRASTAR -->
+
+            <div id="sanduiche">
+
+                <p>
+                    Arraste os ingredientes para cá!
+                </p>
+
+            </div>
+
+
+            <!-- TOTAL -->
+
+            <div class="total">
+
+                <h2>
+                    Total: R$ <span id="valor">0,00</span>
+                </h2>
+
+            </div>
+
+
+            <!-- BOTÃO -->
+
+            <button id="finalizar">
+                Finalizar pedido
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         TELA PEDIDO RECEBIDO
+    =============================== -->
+
+    <section id="telaPreparando">
+
+        <div class="pedido">
+
+            <div class="icone">
+                🥪
+            </div>
+
+
+            <h1>
+                Pedido recebido!
+            </h1>
+
+
+            <h2>
+                Estamos preparando seu pedido...
+            </h2>
+
+
+            <p>
+                Seu lanche está sendo preparado.
+            </p>
+
+
+            <div class="carregando">
+
+                <div></div>
+
+            </div>
+
+
+            <p class="aguarde">
+                Aguarde alguns instantes!
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="atividade1.js"></script>
+
+</body>
+
+</html>

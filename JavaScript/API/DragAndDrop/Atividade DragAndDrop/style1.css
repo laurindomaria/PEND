@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+/* ==================================
+   CONFIGURAÇÕES GERAIS
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    background-color: #f5f5f5;
+
+    color: #292929;
+}
+
+
+/* ==================================
+   CABEÇALHO
+================================== */
+
+header {
+    background-color: #d71920;
+
+    color: white;
+
+    padding: 25px 6%;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+header h1 {
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+
+header p {
+    font-size: 14px;
+
+    opacity: 0.9;
+}
+
+
+/* ==================================
+   CONTEÚDO PRINCIPAL
+================================== */
+
+main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns: 1.6fr 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* ==================================
+   INGREDIENTES
+================================== */
+
+.ingredientes {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+
+.ingredientes > h2 {
+    color: #d71920;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+}
+
+
+.ingredientes > h3 {
+    font-size: 17px;
+
+    margin-top: 25px;
+
+    margin-bottom: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.ingredientes > h3::after {
+    content: "";
+
+    height: 1px;
+
+    background-color: #eee;
+
+    flex: 1;
+}
+
+
+/* ==================================
+   OPÇÕES
+================================== */
+
+.opcoes {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.opcoes div {
+    background-color: white;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    min-height: 95px;
+
+    cursor: grab;
+
+    position: relative;
+
+    transition: 0.2s;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+
+.opcoes div::after {
+    content: "+";
+
+    position: absolute;
+
+    right: 10px;
+
+    top: 10px;
+
+    width: 23px;
+
+    height: 23px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #fff0f0;
+
+    color: #d71920;
+
+    font-weight: bold;
+}
+
+
+.opcoes div:hover {
+    border-color: #d71920;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 7px 15px rgba(215, 25, 32, 0.12);
+}
+
+
+.opcoes div:active {
+    cursor: grabbing;
+
+    transform: scale(0.97);
+}
+
+
+.opcoes h4 {
+    font-size: 14px;
+
+    margin-bottom: 9px;
+
+    padding-right: 20px;
+}
+
+
+.opcoes p {
+    color: #d71920;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ==================================
+   ÁREA DO LANCHE
+================================== */
+
+.lanche {
+    background-color: white;
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    position: sticky;
+
+    top: 20px;
+}
+
+
+.lanche > h2 {
+    font-size: 20px;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+/* ==================================
+   ÁREA PARA ARRASTAR
+================================== */
+
+#sanduiche {
+    min-height: 350px;
+
+    padding: 15px;
+
+    border: 2px dashed #d71920;
+
+    border-radius: 12px;
+
+    background-color: #fffafa;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+
+    gap: 10px;
+
+    transition: 0.2s;
+}
+
+
+#sanduiche:hover {
+    background-color: #fff4f4;
+
+    border-color: #b71c1c;
+}
+
+
+/* ==================================
+   TEXTO INICIAL
+================================== */
+
+#sanduiche > p {
+    width: 100%;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-top: 140px;
+}
+
+
+/* ==================================
+   INGREDIENTES DENTRO DO PEDIDO
+================================== */
+
+#sanduiche div {
+    width: calc(50% - 5px);
+
+    padding: 12px;
+
+    background-color: white;
+
+    border: 1px solid #eee;
+
+    border-radius: 9px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+
+    animation: aparecer 0.25s ease;
+}
+
+
+#sanduiche div h4 {
+    color: #d71920;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+
+#sanduiche div p {
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ==================================
+   ANIMAÇÃO
+================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+/* ==================================
+   TOTAL
+================================== */
+
+.total {
+    margin-top: 18px;
+
+    padding: 18px;
+
+    background-color: #d71920;
+
+    color: white;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+.total h2 {
+    color: white;
+
+    font-size: 19px;
+}
+
+
+/* ==================================
+   BOTÃO FINALIZAR
+================================== */
+
+#finalizar {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #333;
+
+    color: white;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#finalizar:hover {
+    background-color: #222;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+#finalizar:active {
+    transform: scale(0.98);
+}
+
+
+/* ==================================
+   TELA PEDIDO RECEBIDO
+================================== */
+
+#telaPreparando {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #b71c1c,
+        #e53935
+    );
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+
+/* ==================================
+   CARD PEDIDO RECEBIDO
+================================== */
+
+#telaPreparando .pedido {
+    width: 100%;
+
+    max-width: 500px;
+
+    background-color: white;
+
+    padding: 45px 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    animation: aparecerPedido 0.5s ease;
+}
+
+
+/* ==================================
+   ÍCONE
+================================== */
+
+#telaPreparando .icone {
+    width: 85px;
+
+    height: 85px;
+
+    margin: 0 auto 20px;
+
+    background-color: #fff0f0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 45px;
+}
+
+
+/* ==================================
+   TÍTULOS
+================================== */
+
+#telaPreparando .pedido h1 {
+    color: #d71920;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+#telaPreparando .pedido h2 {
+    color: #333;
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+
+#telaPreparando .pedido p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ==================================
+   BARRA DE CARREGAMENTO
+================================== */
+
+.carregando {
+    width: 100%;
+
+    height: 10px;
+
+    background-color: #eee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 30px 0 15px;
+}
+
+
+.carregando div {
+    width: 40%;
+
+    height: 100%;
+
+    background-color: #d71920;
+
+    border-radius: 20px;
+
+    animation: carregando 1.5s infinite ease-in-out;
+}
+
+
+@keyframes carregando {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(250%);
+    }
+
+}
+
+
+/* ==================================
+   TEXTO AGUARDE
+================================== */
+
+.aguarde {
+    color: #d71920 !important;
+
+    font-weight: 600;
+
+    margin-top: 10px;
+}
+
+
+/* ==================================
+   ANIMAÇÃO DO CARD
+================================== */
+
+@keyframes aparecerPedido {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ==================================
+   RESPONSIVO
+================================== */
+
+@media (max-width: 950px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .lanche {
+        position: static;
+    }
+
+}
+
+
+/* ==================================
+   TABLET
+================================== */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .ingredientes {
+        padding: 20px;
+    }
+
+    .opcoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==================================
+   CELULAR
+================================== */
+
+@media (max-width: 450px) {
+
+    .opcoes {
+        grid-template-columns: 1fr;
+    }
+
+    #sanduiche div {
+        width: 100%;
+    }
+
+    #telaPreparando .pedido {
+        padding: 35px 20px;
+    }
+
+    #telaPreparando .pedido h1 {
+        font-size: 24px;
+    }
+
+    #telaPreparando .pedido h2 {
+        font-size: 16px;
+    }
+
+}
