@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Visita Técnica</title>
+
+    <link rel="stylesheet" href="atividade1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registro de Visita Técnica</h1>
+
+        <p class="descricao">
+            Sistema para registrar a localização e imagem
+            durante uma visita técnica.
+        </p>
+
+
+        <div class="cards">
+
+            <!-- LOCALIZAÇÃO -->
+
+            <div class="card">
+
+                <h2>Localização</h2>
+
+                <button id="btnLocalizacao">
+                    Obter Localização
+                </button>
+
+                <div class="dados">
+
+                    <p>
+                        <strong>Latitude:</strong>
+                        <span id="latitude">---</span>
+                    </p>
+
+                    <p>
+                        <strong>Longitude:</strong>
+                        <span id="longitude">---</span>
+                    </p>
+
+                    <p>
+                        <strong>Precisão:</strong>
+                        <span id="precisao">---</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CÂMERA -->
+
+            <div class="card">
+
+                <h2>Câmera</h2>
+
+                <button id="btnCamera">
+                    Ativar Câmera
+                </button>
+
+                <video id="camera" autoplay playsinline></video>
+
+                <button id="btnFoto">
+                    Tirar Foto
+                </button>
+
+                <canvas id="canvas"></canvas>
+
+                <img id="foto" alt="Foto capturada">
+
+                <p id="mensagem"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p><strong>Geolocation & Câmera</strong></p>
+
+        <p>
+            Atividade prática - Desenvolvimento de Sistemas
+        </p>
+
+    </footer>
+
+
+    <script src="atividade1.js"></script>
+
+</body>
+
+</html>
