@@ -121,8 +121,6 @@ async function buscarNoticias() {
     }
 
 }
-
-
 /* ==============================
    BOTÃO DE NOTÍCIAS
 ============================== */
